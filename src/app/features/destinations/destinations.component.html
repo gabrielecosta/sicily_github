@@ -1,1 +1,18 @@
-<p>destinations works!</p>
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let trip of trips">
+    <mat-card class="mat-elevation-z4">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title> {{ trip.title }}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="{{ trip.photoUrl }}" alt="Photo of {{ trip.title }}">
+      <mat-card-content>
+        <p>{{ trip.description }}</p>
+      </mat-card-content>
+      <button><a>Scopri</a></button>
+    </mat-card>
+    </div>
+  </div>
+
+</div>

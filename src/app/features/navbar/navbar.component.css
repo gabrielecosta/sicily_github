@@ -8,10 +8,10 @@
 ul#menu li{
   display: inline;
   text-decoration: none;
+  margin: 10px;
 }
 
 a {
   text-decoration: none;
-  color: rgba(54, 54, 54, 0.815);
-  padding-right: 10px;
+  color: white
 }
