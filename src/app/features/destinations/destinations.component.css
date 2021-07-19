@@ -10,7 +10,14 @@
   width: 200px;
 }
 
-.searchbox {
-  margin-left: 50%;
-  margin-right: 50%;
+
+.custom_button {
+  background-color: rgba(139, 0, 0, 0.794);
+  color: white;
+}
+
+.custom_button:hover {
+  transition: 0.3;
+  background-color: transparent;
+  color: rgba(139, 0, 0, 0.794);
 }

@@ -1,6 +1,4 @@
 .searchbox {
-  margin-left: 20%;
-  margin-right: 20%;
   padding: 10px;
 }
 
@@ -15,7 +13,6 @@ label {
 input {
   padding: .5rem;
   width: 100%;
-  max-width: 600px;
   box-sizing: border-box;
   border-radius: 10px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.246) inset;
@@ -24,7 +21,7 @@ input {
 }
 
 input:focus {
-  outline: #336699 auto 1px;
+  outline: rgba(153, 0, 0, 0.835) auto 1px;
 }
 
 li {
@@ -36,7 +33,6 @@ li {
   border-right: 1px solid gray;
   display: inline-block;
   width: 100%;
-  max-width: 600px;
   padding: .5rem;
   box-sizing: border-box;
   text-decoration: none;
@@ -44,7 +40,7 @@ li {
 }
 
 .search-result li a:hover {
-  background-color: #435A60;
+  background-color: rgba(153, 0, 0, 0.835)  ;
   color: white;
 }
 

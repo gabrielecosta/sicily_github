@@ -8,6 +8,7 @@ import { HomeComponent } from './features/home/home.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from '@angular/common/http';
 import { InMemoryDataService } from './shared/services/in-memory-data.service';
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -39,6 +40,7 @@ import { TripSearchComponent } from './features/trip-search/trip-search.componen
     MatIconModule,
     MatListModule,
     MatCardModule,
+    MatButtonModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
@@ -48,7 +50,8 @@ import { TripSearchComponent } from './features/trip-search/trip-search.componen
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
