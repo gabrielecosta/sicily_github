@@ -16,6 +16,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavbarComponent } from './features/navbar/navbar.component';
 import { NgModule } from '@angular/core';
 import { TransfertsComponent } from './features/transferts/transferts.component';
+import { TripDetailComponent } from './features/trip-detail/trip-detail.component';
+import { TripSearchComponent } from './features/trip-search/trip-search.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { TransfertsComponent } from './features/transferts/transferts.component'
     HomeComponent,
     ContattiComponent,
     DestinationsComponent,
-    TransfertsComponent
+    TransfertsComponent,
+    TripDetailComponent,
+    TripSearchComponent
   ],
   imports: [
     BrowserModule,

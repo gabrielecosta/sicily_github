@@ -70,7 +70,7 @@ export class TripServiceService {
       return of([]);
     }
     //l'url include una stringa di query con il termine di ricerca.
-    return this.http.get<Trip[]>(`${this.tripsUrl}/?name=${term}`).pipe(
+    return this.http.get<Trip[]>(`${this.tripsUrl}/?title=${term}`).pipe(
       tap(x => x.length ?
          console.log(`found trips matching "${term}"`) :
          console.log(`no trips matching "${term}"`)),
