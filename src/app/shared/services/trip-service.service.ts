@@ -66,8 +66,8 @@ export class TripServiceService {
   /* GET trips whose name contains search term */
   searchTrips(term: string): Observable<Trip[]> {
     if (!term.trim()) {
-      // if not search term, return empty hero array.
-      return of([]);
+      // if not search term, return all.
+      return this.getTrips();
     }
     //l'url include una stringa di query con il termine di ricerca.
     return this.http.get<Trip[]>(`${this.tripsUrl}/?title=${term}`).pipe(

@@ -1,9 +1,9 @@
 <div fxLayoutAlign="center">
-  <app-trip-search fxFlex="50%" fxFlex.xs="90%" fxFlex.sm="70%"></app-trip-search>
+  <app-trip-search fxFlex="50%" fxFlex.xs="90%" fxFlex.sm="70%" (newEvent)="sortingTrips($event)"></app-trip-search>
 </div>
 <div class="content">
   <div fxLayout="row wrap" fxLayoutGap="20px grid" fxLayoutAlign="center">
-    <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let trip of trips$ | async">
+    <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let trip of filteredTrips$ | async">
     <mat-card class="mat-elevation-z4">
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>

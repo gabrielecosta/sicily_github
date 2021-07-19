@@ -14,12 +14,14 @@ export class DestinationsComponent implements OnInit {
   //trips: Trip[] = [];
 
   trips$!: Observable<Trip[]>;
+  filteredTrips$!: Observable<Trip[]>
 
   constructor(private tripService: TripServiceService) { }
 
   ngOnInit(): void {
     //this.getTrips();
     this.trips$ = this.tripService.getTrips();
+    this.filteredTrips$ = this.trips$;
   }
 
  /*
@@ -27,5 +29,9 @@ export class DestinationsComponent implements OnInit {
     this.tripService.getTrips().subscribe(trips => this.trips = trips);
   }
   */
+
+  sortingTrips(term: string): void {
+    this.filteredTrips$ = this.tripService.searchTrips(term);
+  }
 
 }

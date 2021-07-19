@@ -1,11 +1,13 @@
 <div>
   <label for="search-box" style="text-align: center;">Trova la tua destinazione</label>
   <input #searchBox id="search-box" (input)="search(searchBox.value)" placeholder="Inserisci un carattere"/>
-  <ul class="search-result">
+ <!--
+   <ul class="search-result">
     <li *ngFor="let trip of filteredTrips$ | async" >
       <a routerLink="/destinations/trip/{{trip.id}}">
         {{trip.title}}
       </a>
     </li>
   </ul>
+ -->
 </div>

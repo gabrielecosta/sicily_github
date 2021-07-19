@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EventEmitter, Output } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import {
   debounceTime,
@@ -16,6 +17,8 @@ import { TripServiceService } from 'src/app/shared/services/trip-service.service
 })
 export class TripSearchComponent implements OnInit {
 
+  @Output() newEvent = new EventEmitter<string>();
+
   filteredTrips$!: Observable<Trip[]>
   private searchTerms = new Subject<string>();
 
@@ -31,6 +34,7 @@ export class TripSearchComponent implements OnInit {
 
   search(term: string): void {
     this.searchTerms.next(term);
+    this.newEvent.next(term);
   }
 
 }
