@@ -1,8 +1,6 @@
-<p>Cerca una meta</p>
-<div>
+<div class=".searchbox">
   <app-trip-search></app-trip-search>
 </div>
-<p>Ecco altre nostre mete</p>
 <div class="content">
   <div fxLayout="row wrap" fxLayoutGap="16px grid">
     <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let trip of trips$ | async">

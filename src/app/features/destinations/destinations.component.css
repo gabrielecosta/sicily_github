@@ -9,3 +9,8 @@
 .content > mat-card {
   width: 200px;
 }
+
+.searchbox {
+  margin-left: 50%;
+  margin-right: 50%;
+}
