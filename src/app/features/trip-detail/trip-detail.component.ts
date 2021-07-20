@@ -6,6 +6,7 @@ import { Location } from '@angular/common';
 import { Trip } from 'src/app/shared/model/trip';
 import { TripServiceService } from './../../shared/services/trip-service.service';
 
+
 @Component({
   selector: 'app-trip-detail',
   templateUrl: './trip-detail.component.html',
@@ -14,6 +15,9 @@ import { TripServiceService } from './../../shared/services/trip-service.service
 export class TripDetailComponent implements OnInit {
 
 @Input() trip?: Trip;
+
+imgCollection: string[] = [];
+index: number = 0;
 
   constructor(
     private route: ActivatedRoute,
@@ -28,10 +32,29 @@ export class TripDetailComponent implements OnInit {
   getTrip(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.tripService.getTrip(id)
-      .subscribe(trip => this.trip = trip);
+      .subscribe((trip) => {
+        this.trip = trip;
+        this.imgCollection = trip.photoUrl
+      });
   }
 
   goBack(): void {
     this.location.back();
+  }
+
+  increment(): void {
+    if (this.index < this.imgCollection.length - 1) {
+    this.index++;
+    } else {
+      console.log("max index");
+    }
+  }
+
+  decrement(): void {
+    if (this.index > 0) {
+      this.index--;
+      } else {
+        console.log("min index");
+      }
   }
 }

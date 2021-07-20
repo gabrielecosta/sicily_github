@@ -19,6 +19,7 @@ import { NgModule } from '@angular/core';
 import { TransfertsComponent } from './features/transferts/transferts.component';
 import { TripDetailComponent } from './features/trip-detail/trip-detail.component';
 import { TripSearchComponent } from './features/trip-search/trip-search.component';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { TripSearchComponent } from './features/trip-search/trip-search.componen
     MatCardModule,
     MatButtonModule,
     HttpClientModule,
+    NgImageSliderModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     )
@@ -51,7 +53,8 @@ import { TripSearchComponent } from './features/trip-search/trip-search.componen
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+    NgImageSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

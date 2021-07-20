@@ -3,5 +3,5 @@ export interface Trip {
     title: string,
     description: string,
     text: string,
-    photoUrl: string
+    photoUrl: string[]
 }

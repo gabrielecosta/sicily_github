@@ -36,5 +36,4 @@ export class TripSearchComponent implements OnInit {
     this.searchTerms.next(term);
     this.newEvent.next(term);
   }
-
 }

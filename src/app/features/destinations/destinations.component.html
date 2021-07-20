@@ -9,7 +9,7 @@
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title> {{ trip.title }}</mat-card-title>
       </mat-card-header>
-      <img mat-card-image src="{{ trip.photoUrl }}" alt="Photo of {{ trip.title }}">
+      <img mat-card-image src="{{ trip.photoUrl[0] }}" alt="Photo of {{ trip.title }}">
       <mat-card-content>
         <p>{{ trip.description }}</p>
       </mat-card-content>
