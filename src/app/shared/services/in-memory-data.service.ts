@@ -1,5 +1,6 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Injectable } from '@angular/core';
+import { Transfert } from '../model/transfert';
 import { Trip } from '../model/trip';
 
 @Injectable({
@@ -74,8 +75,28 @@ export class InMemoryDataService implements InMemoryDbService {
         ]
       }
     ];
-    return {trips};
+
+    const transferts = [
+      {
+        id: 1,
+        dest: "Palermo - Catania",
+        price: 10.50
+      },
+      {
+        id: 2,
+        dest: "Palermo - Aeroporto",
+        price: 7.00
+      },
+      {
+        id: 3,
+        dest: "Mondello",
+        price: 12.35
+      }
+    ];
+
+    return {trips, transferts};
   }
+
 
   genId(trips: Trip[]): number {
     return trips.length > 0 ? Math.max(...trips.map(trip => trip.id)) + 1 : 1;

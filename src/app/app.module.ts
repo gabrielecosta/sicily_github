@@ -13,13 +13,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavbarComponent } from './features/navbar/navbar.component';
+import { NgImageSliderModule } from 'ng-image-slider';
 import { NgModule } from '@angular/core';
 import { TransfertsComponent } from './features/transferts/transferts.component';
 import { TripDetailComponent } from './features/trip-detail/trip-detail.component';
 import { TripSearchComponent } from './features/trip-search/trip-search.component';
-import { NgImageSliderModule } from 'ng-image-slider';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
     MatListModule,
     MatCardModule,
     MatButtonModule,
+    MatTableModule,
     HttpClientModule,
     NgImageSliderModule,
     HttpClientInMemoryWebApiModule.forRoot(
@@ -54,7 +56,8 @@ import { NgImageSliderModule } from 'ng-image-slider';
     MatIconModule,
     MatListModule,
     MatButtonModule,
-    NgImageSliderModule
+    NgImageSliderModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
