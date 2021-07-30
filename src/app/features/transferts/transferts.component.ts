@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Observable } from 'rxjs';
+import { Transfert } from 'src/app/shared/model/transfert';
+import { TransfertService } from './../../shared/services/transfert.service';
+
 @Component({
   selector: 'app-transferts',
   templateUrl: './transferts.component.html',
@@ -7,9 +11,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransfertsComponent implements OnInit {
 
-  constructor() { }
+  trasf$! : Observable<Transfert[]>;
+  filteredTrasf$! : Observable<Transfert[]>;
+  dataSource: Transfert[] = [];
+
+  constructor( private trasfService: TransfertService ) { }
 
   ngOnInit(): void {
+    this.trasfService.getTransferts()
+      .subscribe(array => this.dataSource = array);
   }
 
+
+  sortingTrasferts(term: string): void {
+    this.trasfService.searchTransferts(term)
+      .subscribe(array => this.dataSource = array);
+  }
+
+  displayedColumns: string[] = ['id', 'dest', 'price' ];
 }
+
+/*
+ngOnInit(): void {
+    this.trasf$ = this.tripService.getTrips();
+    this.filteredTrips$ = this.trips$;
+  }
+
+  sortingTrips(term: string): void {
+    this.filteredTrips$ = this.tripService.searchTrips(term);
+  }
+  */
