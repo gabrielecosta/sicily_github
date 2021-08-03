@@ -1,6 +1,6 @@
 .custom_text {
   text-decoration: none;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .custom_text:hover {
@@ -13,3 +13,4 @@
   margin: 5%;
   color: rgba(0, 0, 0, 0.863);
 }
+
