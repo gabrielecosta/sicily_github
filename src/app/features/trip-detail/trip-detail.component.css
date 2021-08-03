@@ -79,3 +79,7 @@ polyline {
   background-color: transparent;
   color: rgba(139, 0, 0, 0.794);
 }
+
+.img-slider {
+  max-height: fit-content;
+}

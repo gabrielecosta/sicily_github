@@ -6,7 +6,6 @@ import { Location } from '@angular/common';
 import { Trip } from 'src/app/shared/model/trip';
 import { TripServiceService } from './../../shared/services/trip-service.service';
 
-
 @Component({
   selector: 'app-trip-detail',
   templateUrl: './trip-detail.component.html',
@@ -46,7 +45,8 @@ index: number = 0;
     if (this.index < this.imgCollection.length - 1) {
     this.index++;
     } else {
-      console.log("max index");
+      //console.log("max index");
+      this.index = 0;
     }
   }
 
@@ -54,7 +54,8 @@ index: number = 0;
     if (this.index > 0) {
       this.index--;
       } else {
-        console.log("min index");
+        //console.log("min index");
+        this.index = this.imgCollection.length - 1;
       }
   }
 }
