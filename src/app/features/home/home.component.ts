@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
     },
     {
       id: 2,
-      title: 'Transfer',
+      title: 'Transfert',
       url: '/transferts',
       photo: 'https://www.open.online/wp-content/uploads/2020/04/aereo1.jpg'
     },
