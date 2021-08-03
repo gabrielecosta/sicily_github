@@ -15,7 +15,7 @@ export class TransfertsComponent implements OnInit {
   filteredTrasf$! : Observable<Transfert[]>;
   dataSource: Transfert[] = [];
 
-  constructor( private trasfService: TransfertService ) { }
+  constructor(private trasfService: TransfertService) { }
 
   ngOnInit(): void {
     this.trasfService.getTransferts()
@@ -30,14 +30,3 @@ export class TransfertsComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'dest', 'price' ];
 }
-
-/*
-ngOnInit(): void {
-    this.trasf$ = this.tripService.getTrips();
-    this.filteredTrips$ = this.trips$;
-  }
-
-  sortingTrips(term: string): void {
-    this.filteredTrips$ = this.tripService.searchTrips(term);
-  }
-  */

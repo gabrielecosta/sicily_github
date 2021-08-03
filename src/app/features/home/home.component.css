@@ -1,0 +1,9 @@
+.custom_text {
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.custom_text:hover {
+  transition: 0.6;
+  color: rgba(219, 0, 0, 0.794);
+}
