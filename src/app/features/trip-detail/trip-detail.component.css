@@ -5,6 +5,7 @@ img {
 
 .photo {
   max-width: 90%;
+  max-height: 40%;
 }
 
 @media only screen and (min-width: 600px) {
@@ -77,4 +78,8 @@ polyline {
   transition: 0.3;
   background-color: transparent;
   color: rgba(139, 0, 0, 0.794);
+}
+
+.img-slider {
+  max-height: fit-content;
 }

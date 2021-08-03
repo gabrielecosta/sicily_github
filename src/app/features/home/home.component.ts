@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
     },
     {
       id: 2,
-      title: 'Transfer',
+      title: 'Transfert',
       url: '/transferts',
       photo: 'https://www.open.online/wp-content/uploads/2020/04/aereo1.jpg'
     },
@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
       id: 3,
       title: 'Contatti',
       url: '/contacts',
-      photo: 'https://hd2.tudocdn.net/901167?w=1200&h=900'
+      photo: 'https://www.hwupgrade.it/i/n/mercedes-benz_eqv_2020_720.jpg'
     }
   ];
 
