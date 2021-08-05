@@ -15,3 +15,42 @@ a {
   text-decoration: none;
   color: white
 }
+
+.example-container {
+  width: 500px;
+  height: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+}
+
+.material-icons { font-size: 36px; color: white;}
+
+.sub-menu {
+  background-color: darkred;
+}
+
+.sub-menu ul li {
+  text-decoration: none;
+}
+
+.w3-sidebar {
+  background-color: rgba(139, 0, 0, 0.705);
+  height: 25%;
+  width: 100%;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}

@@ -1,8 +1,27 @@
+<div fxShow="true" fxHide.lt-md="true">
 <mat-toolbar style="background-color: darkred;">
-<ul id="menu">
-    <li><a routerLink='/home'>Home</a></li>
-    <li><a routerLink='/contacts'>Contatti</a></li>
-    <li><a routerLink='/destinations'>Mete</a></li>
-    <li><a routerLink='/transferts'>Transfert</a></li>
-</ul>
+  <span>Logo</span>
+  <span class="example-spacer"></span>
+  <a routerLink="/home" mat-button>Home</a>
+  <a routerLink="/contacts" mat-button>Contatti</a>
+  <a routerLink="/destinations" mat-button>Destinazioni</a>
+  <a routerLink="/transferts" mat-button>Transfert</a>
 </mat-toolbar>
+</div>
+
+<div fxShow="true" fxHide.gt-sm="true">
+  <mat-toolbar style="background-color: darkred;">
+    <span class="material-icons" mat-button (click)="show()">menu</span>
+    <span>Logo</span>
+  </mat-toolbar>
+  <div *ngIf="showMenu">
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-bar-block fixed" id="mySidebar" [class.display]="displayNav">
+      <button class="w3-bar-item w3-button w3-large" (click)="show()">Close &times;</button>
+        <a routerLink="/home" class="w3-bar-item w3-button" (click)="show()">Home</a>
+        <a routerLink="/contacts" class="w3-bar-item w3-button" (click)="show()">Contatti</a>
+        <a routerLink="/destinations" class="w3-bar-item w3-button" (click)="show()">Destinazioni</a>
+        <a routerLink="/transferts" class="w3-bar-item w3-button" (click)="show()">Transfert</a>
+    </div>
+  </div>
+</div>
