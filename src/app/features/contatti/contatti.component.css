@@ -1,0 +1,91 @@
+.text_desc {
+  padding: 10px;
+  margin: 5%;
+  color: rgba(0, 0, 0, 0.863);
+}
+
+img {
+  width: 80%;
+  height: auto;
+}
+
+.photo {
+  max-width: 90%;
+  max-height: 40%;
+}
+
+@media only screen and (min-width: 600px) {
+  img {
+    width: 50%;
+    height: auto;
+  }
+
+  .photo {
+    max-width: 50%;
+  }
+}
+
+.slider {
+  padding: 10px;
+}
+
+button {
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  outline:0;
+}
+
+svg {
+  padding: 5px;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+
+.left:hover polyline,
+.left:focus polyline {
+  stroke-width: 3;
+}
+
+.left:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+.right:hover polyline,
+.right:focus polyline {
+  stroke-width: 3;
+}
+
+.right:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+polyline {
+  transition: all 250ms ease-in-out;
+}
+
+.text_desc {
+  padding: 10px;
+  margin: 5%;
+  color: rgba(0, 0, 0, 0.863);
+}
+
+.custom_button {
+  background-color: rgba(139, 0, 0, 0.794);
+  color: white;
+}
+
+.custom_button:hover {
+  transition: 0.3;
+  background-color: transparent;
+  color: rgba(139, 0, 0, 0.794);
+}
+
+.img-slider {
+  max-height: fit-content;
+}
